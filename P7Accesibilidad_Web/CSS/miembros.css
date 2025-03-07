@@ -1,0 +1,169 @@
+
+
+
+
+/* Estilos Generales */
+body {
+    background-color: #222222;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgb(19, 19, 19);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    max-height: 80px;
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: rgb(255, 211, 251);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    color: white;
+    background-color: rgba(255, 211, 251, 0.2);
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(21, 21, 21);
+    padding: 15px;
+    font-size: 14px;
+}
+
+#colab {
+    padding: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#colabmiem {
+    background-color: #92528a;
+    padding: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+
+
+.miembros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px;
+}
+
+.miembros figure {
+    position: relative;
+    width: 240px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.miembros figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.miembros figure:hover {
+    transform: translateY(-10px);
+}
+
+.miembros figure:hover img {
+    transform: scale(1.05);
+}
+
+/* Efecto de capa oscura y texto */
+.miembros figure .capa {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(146, 82, 138, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.miembros figure:hover .capa {
+    opacity: 1;
+}
+
+.miembros figure .capa h3 {
+    font-size: 1.3rem;
+    margin: 5px 0;
+}
+
+.miembros figure .capa p {
+    font-size: 1.0rem;
+    text-align: center;
+    padding: 0 10px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .miembros {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .miembros figure {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .miembros {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .miembros figure {
+        max-width: 100%;
+        height: auto;
+    }
+} 
+

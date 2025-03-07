@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-Mercher - Registro</title>
+    <link rel="icon" href="../img/marca.png">
+    <link rel="stylesheet" href="../CSS/registro.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" title="Ir al inicio">
+                <img src="../img/logo00.png" alt="Logo de V-Mercher">
+            </a>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html" title="Página de inicio">Inicio</a></li>
+                <li><a href="miembros.html" title="Ver miembros">Miembros</a></li>
+                <li><a href="productos.html" title="Explorar productos">Productos</a></li>
+                <li><a href="contacto.html" title="Contáctanos">Contacto</a></li>
+                <li><a href="registro.html" title="Crear una cuenta">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="form-register">
+        <h2>Formulario de Registro</h2>
+        <form class="formulario">
+            <input class="controls" type="text" name="nombre" placeholder="Ingrese nombre usuario" required>
+            <input class="controls" type="email" name="correo" placeholder="Ingrese su Correo" required>
+            <input class="controls" type="password" name="contrasena" placeholder="Ingrese su Contraseña" required>
+            <input class="controls" type="password" name="contrasena" placeholder="Repita su Contraseña" required>
+            <input class="controls" type="tel" name="telefono" placeholder="Ingrese su Teléfono" required>
+            <input class="controls" type="date" name="fecha">
+            <select class="controls" name="interes">
+                <option value="0">Mayor interés...</option>
+                <option value="1">Nijisanji</option>
+                <option value="2">Hololive</option>
+                <option value="3">Owozu</option>
+                <option value="4">VShojo</option>
+                <option value="5">FIRST STAGE PRODUCTION</option>
+                <option value="6">Independientes</option>
+                <option value="7">Otro</option>
+            </select>
+            <textarea class="controls" name="comentarios" rows="3" placeholder="Comentarios" required></textarea>
+            <p>Estoy de acuerdo con <a href="#">Términos y Condiciones</a></p>
+            <input class="botons" type="submit" value="Registrar">
+            <input class="botons" type="reset" value="Borrar">
+            <p><a href="#">¿Ya tienes Cuenta?</a></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>Blog realizado por <a href="mailto:correofalso@gmail.com" style="text-decoration:none;color:white;">Elena Rodríguez Fustes y Nicolás Manteiga Camba</a></p>
+        <p>&copy;2025 Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

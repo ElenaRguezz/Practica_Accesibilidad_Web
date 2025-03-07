@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-Mercher - Productos</title>
+    <link rel="icon" href="../img/marca.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/productos.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" title="Ir al inicio">
+                <img src="../img/logo00.png" alt="Logo de V-Mercher">
+            </a>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html" title="Página de inicio">Inicio</a></li>
+                <li><a href="miembros.html" title="Ver miembros">Miembros</a></li>
+                <li><a href="productos.html" title="Explorar productos">Productos</a></li>
+                <li><a href="contacto.html" title="Contáctanos">Contacto</a></li>
+                <li><a href="registro.html" title="Crear una cuenta">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mt-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4" id="productos-container">
+            <!-- Productos aquí -->
+        </div>
+    </div>
+
+    <footer>
+        <p>Blog realizado por <a href="mailto:correofalso@gmail.com" style="text-decoration:none;color:white;">Elena
+                Rodríguez Fustes y Nicolás Manteiga Camba</a></p>
+        <p>&copy;2025 Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const productos = [
+                { img: "../img/producto01.png", nombre: "SattoAki Halloween Sticker 2023", link: "producto01.html" },
+                { img: "../img/producto02.jpg", nombre: "Demon Queen Tea", link: "producto02.html" },
+                { img: "../img/producto03.jpg", nombre: "Merry & Lumi: paquete Journey on the Astraline Express", link: "producto03.html" },
+                { img: "../img/producto04.png", nombre: "Zapatillas Uki Violeta", link: "productos.html" },
+                { img: "../img/producto05.png", nombre: "Peluche Gawr Gura", link: "productos.html" },
+                { img: "../img/producto06.png", nombre: "Goods Set Luxiem", link: "productos.html" },
+                { img: "../img/producto07.png", nombre: "Shxto Spring Sakura Bundle", link: "productos.html" },
+                { img: "../img/producto08.jpg", nombre: "Rosco Graves 1 month Anniversary", link: "productos.html" }
+            ];
+
+            const container = document.getElementById("productos-container");
+            let html = "";
+
+            productos.forEach(producto => {
+                html += `
+                    <div class="col">
+                        <div class="card h-100 card-custom text-white">
+                            <a href="../img/${producto.img}" target="_blank">
+                                <img src="../img/${producto.img}" class="card-img-top" alt="${producto.nombre}">
+                            </a>
+                            <div class="card-body text-center">
+                                <a href="${producto.link}" class="text-decoration-none text-white"><h5 class="card-title">${producto.nombre}</h5></a>
+                                       <button class="añadir" onclick="agregarAlCarrito()">
+            <i class="fas fa-shopping-cart"></i> Añadir al Carrito
+        </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        });
+    </script>
+</body>
+
+</html>
